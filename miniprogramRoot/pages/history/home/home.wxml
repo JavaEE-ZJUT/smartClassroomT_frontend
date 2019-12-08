@@ -1,0 +1,94 @@
+<import src="/template/loading/loading.wxml"></import>
+
+
+
+
+<view class="overallBox">
+
+  <view class="header">
+    <text>{{dateShow}}</text>
+  </view>
+
+
+
+
+  <view class="overallContent" bindtap="hideRight">
+
+
+
+    <scroll-view scroll-y class="body"  
+          style="height: calc(100vh - {{CustomBar}}px - 225rpx);">
+
+      <view class="container" wx:if="{{!loading}}">
+
+        <view class="meeting" 
+          bindtap="showMeeting"  data-index="{{index}}"
+          wx:for="{{meetingList}}" wx:key="unique">
+
+          <!-- 左上角日期 -->
+          <view class="date">
+            <text>{{item.day}}</text>
+            <!-- <text class="br"></text> -->
+            <text>{{item.time}}</text>
+          </view>
+
+          <view class="meetingSummary">
+
+            <view>
+              <text>地点：</text>
+              <text>{{item.place}}</text>
+            </view>
+
+            <view>
+              <text>会议内容：</text>
+              <text>{{item.content}}</text>
+            </view>
+
+
+          </view>
+        </view>
+
+
+
+      </view>
+
+
+
+
+    </scroll-view>
+
+
+
+    <view class="right" catchtap>
+
+      <scroll-view scroll-y class="time-axis"
+            bindscrolltolower="addYear">
+
+            <view class="part" 
+              wx:for="{{timeList.list}}" wx:key="unique" wx:for-item="item">
+
+              <view class="year">{{item.year}}</view>
+
+              <view 
+                class="month {{date === item.year + '-' + month ? 'active' : ''}}"
+                catchtap="selectMonth" data-date="{{item.year}}-{{month}}"
+                wx:for="{{item.months}}" wx:key="unique" wx:for-item="month" 
+                >
+                <text>{{month}}</text>
+                <text>月</text>
+                </view>
+            
+            </view>
+
+      </scroll-view>
+
+    </view>
+
+  </view>
+
+
+  <template is="loading" wx:if="{{loading}}"></template>
+
+
+
+</view>

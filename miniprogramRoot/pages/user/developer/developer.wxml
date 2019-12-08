@@ -1,0 +1,68 @@
+<window-bar isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">开发人员</view>
+</window-bar>
+
+
+<view class="developer" style="padding-top:{{CustomBar}}px;">
+
+  <view class="developer-info">
+
+    <view class="item">
+
+      <view class="name">
+
+      <text class="label">author:</text>
+      <text>muyu</text>
+      </view>
+            
+      <view class="mail">
+      <text class="label">mail:</text>
+      <text>wuhaomuyu@outlook.com</text>
+      </view>
+
+    </view>
+
+
+  </view>
+
+
+
+  <view class="player">
+
+    <image src="{{music[index].pic.src}}"
+          style="transform: rotate({{rotate}}deg);"
+          class="{{transition ? 'trans' : ''}}"
+           ></image>
+
+    <view class="song-name" style="color: {{music[index].pic.color}};">
+    {{music[index].name}}
+    </view>
+
+    <view class="progress-bar">
+      <view style="width: {{bar}}%;"></view>
+    </view>
+
+
+    <view class="control-bar" >
+
+      <view class="left" bindtap="last">
+         <image src="/images/developer/last.png"></image>
+      </view>
+
+      <view class="start" bindtap="toggle">
+        <image src="/images/developer/{{playing ? 'pause' : 'start'}}.png"></image>
+      </view>
+
+      <view class="right" bindtap="next">
+       <image src="/images/developer/next.png"></image>
+      </view>
+      
+      
+    
+    </view>
+  </view>
+
+
+
+</view>

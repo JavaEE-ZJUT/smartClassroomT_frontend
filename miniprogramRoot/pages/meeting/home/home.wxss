@@ -1,0 +1,203 @@
+@import "/template/loading/loading.wxss";
+
+.meeting {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* --------------------会议信息---------------------- */
+
+.meeting-content {
+  width: 85%;
+  min-height: 600rpx;
+  height: calc(100% - 250rpx);
+  box-sizing: border-box;
+  border-radius: 12rpx;
+  box-shadow: 0 7rpx 7rpx rgba(0, 0, 0, 0.1);
+  padding: 30rpx 50rpx;
+  background-color: var(--white);
+  margin: 0 auto;
+  margin-top: 70rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.meeting-content > view {
+  transition: all 100ms linear;
+}
+
+/* 会议内容 */
+
+.meeting-content > .meeting-data {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  position: relative;
+
+}
+
+.item {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: '微软雅黑';
+  font-size: 27rpx;
+  display: flex;
+}
+
+.dpName {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  line-height: 45rpx;
+}
+
+.icon {
+  box-sizing: border-box;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 30rpx;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.icon image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.item-data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-data text {
+  display: block;
+  padding-left: 20rpx;
+  line-height: 50rpx;
+  color: black;
+  text-align: left;
+  flex: 1 1 0;
+}
+
+.item-data .label {
+  font-size: 20rpx;
+  width: 110rpx;
+  color: #757575;
+  flex: 0 0 auto;
+}
+
+/* -----------------
+    添加督会人员
+   ----------------- */
+
+.addSupervisor {
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 100%;
+  background-color: var(--red);
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.addSupervisor image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-radius: 100%;
+  margin: auto;
+}
+
+/* -----------------------
+    模态框
+  ------------------------- */
+
+.cu-modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cu-modal .cu-dialog {
+  width: 80%;
+  height: 300rpx;
+  border-radius: 9rpx;
+}
+
+
+.cu-dialog .title {
+  background-color: #fff;
+  height: 200rpx;
+  line-height: 200rpx;
+  padding: 0;
+}
+
+.cu-dialog .cu-btns {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.cu-btns .cu-btn {
+  border-radius: 9rpx;
+}
+
+.cu-btns .cu-btn:last-child {
+  background-color: var(--main-red);
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* --------------------
+    没有会议的显示
+  -------------------- */
+
+.no-meeting {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.no-meeting image {
+  width: 230rpx;
+  height: 230rpx;
+}
+
+.no-meeting text {
+  display: block;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  font-size: 35rpx;
+  color: #8a8a8a;
+  font-family: '微软雅黑';
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+     "meeting": "../meeting/home/home",
+     "user": "../user/home/home",
+     "history": "../history/home/home"
+  },
+  "enablePullDownRefresh": false
+}

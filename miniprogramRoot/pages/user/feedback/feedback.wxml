@@ -1,0 +1,31 @@
+<window-bar isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">意见反馈</view>
+</window-bar>
+
+
+
+
+<view class="feedback">
+
+  <form bindsubmit="formsubmit">
+
+
+    <view class="cu-form-group top">
+
+      <textarea name="message" 
+      data-placeholder="请输入反馈意见" maxlength="150" value="{{input}}" 
+      placeholder-class="placeholder" show-confirm-bar="{{false}}"
+      class="{{textareaAValue?'value':''}}" bindinput="textareaAInput"></textarea>
+
+    </view>
+
+
+    <view class="btn">
+      <button type="primary" form-type="submit" hover-class="none">提交</button>
+    </view>
+
+
+  </form>
+
+</view>

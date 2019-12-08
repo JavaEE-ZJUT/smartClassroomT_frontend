@@ -1,0 +1,17 @@
+<view class="my-custom"
+      style="height:{{CustomBar}}px; padding-top:{{StatusBar}}px; padding-right: calc(750rpx - {{Custom.left}}px);">
+
+  <view class="my-bar" wx:if="{{isBack}}">
+    
+    <view class="action" catchtap="BackPage"
+     style="width:{{Custom.width}}px; margin-left: calc(750rpx - {{Custom.right}}px);">
+      <text class="icon-back"></text>
+      <slot name="backText"></slot>
+    </view>
+
+    <view class="content">
+      <slot name="content"></slot>
+    </view>
+
+  </view>
+</view>

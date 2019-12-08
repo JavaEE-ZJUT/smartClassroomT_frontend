@@ -1,0 +1,121 @@
+/* pages/login/home/home.wxss */
+
+page {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--pink1);
+}
+
+.loginPage {
+  width: 100%;
+  height: 100%;
+}
+
+
+.select {
+  width: 75%;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 12.5%;
+  top: 30%;
+}
+
+.select-item {
+  width: 100%;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.select button {
+  display: block;
+  border-radius: 10rpx;
+  width: 100%;
+  margin: auto;
+  margin-top: 50rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+
+.select-item view {
+  display: block;
+  text-align: center;
+  padding: 35rpx 15rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+
+/* ------------------
+    模态框
+ ---------------------- */
+ 
+.cu-dialog {
+  height: 80%;
+  box-sizing: border-box;
+  padding: 0;
+  border-radius: 0;
+  background-color: var(--white);
+}
+
+.cu-dialog.position {
+  height: 300rpx;
+  border-radius: 0;
+}
+
+.cu-list.menu {
+  width: 100%;
+  height: calc(100% - 100rpx);
+  box-sizing: border-box;
+  overflow: auto;
+  border-radius: 0;
+}
+
+.cu-list .cu-item {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  transition: background-color .1s linear;
+}
+
+
+.cu-item::after {
+  display: none;
+}
+
+.cu-list .cu-item.radio-active {
+  color: var(--white);
+  background-color: var(--red);
+}
+
+
+/*  确认取消按钮  */
+.cu-dialog .confirm {
+  height: 100rpx;
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-around;
+  align-items: flex-end;
+
+}
+
+
+.confirm text {
+  width: 50%;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: var(--gray);
+  color: var(--white);
+}
+
+.confirm text:last-child {
+  background-color: var(--pink1);
+}

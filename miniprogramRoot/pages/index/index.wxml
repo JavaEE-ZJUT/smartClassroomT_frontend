@@ -1,0 +1,54 @@
+<view class="wbar" style="height: {{CustomBar}}px;"></view>
+
+
+<view class="main">
+
+
+<meeting wx:if="{{PageCur ===  'homeWork'}}"></meeting>
+
+
+<user wx:if="{{PageCur ===  'mine'}}"></user>
+
+
+<history wx:if="{{PageCur ===  'class'}}"></history>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+<view class="tbar">
+
+  <view class="ct">
+
+    <view class="item {{PageCur === 'homeWork' ? 'active' : ''}}"
+          bindtap="changeCur" data-cur="homeWork"
+          animation="{{ PageCur === 'homeWork' ? tabAnim : '' }}">
+      <image src="../../assets/images/tbar/homeWork{{PageCur === 'homeWork' ? '-active' : ''}}.svg"></image>
+      <text>作业</text>
+    </view>
+
+    <view class="item {{PageCur === 'class' ? 'active' : ''}}"
+          bindtap="changeCur" data-cur="class"
+          animation="{{ PageCur === 'class' ? tabAnim : '' }}">
+      <image src="../../assets/images/tbar/class{{PageCur === 'class' ? '-active' : ''}}.svg"></image>
+      <text>班级</text>
+    </view>
+
+    <view class="item {{PageCur === 'mine' ? 'active' : ''}}"
+          bindtap="changeCur" data-cur="mine"
+          animation="{{ PageCur === 'mine' ? tabAnim : '' }}">
+      <image src="../../assets/images/tbar/mine{{PageCur === 'mine' ? '-active' : ''}}.svg"></image>
+      <text>我的</text>
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,62 @@
+<window-bar isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">发布会议</view>
+</window-bar>
+
+
+<view class="release" style="padding-top:{{CustomBar}}px;">
+
+  <form class="form" bindsubmit="formSubmit">
+    <view class="cu-form-group">
+      <view class="title">部门</view>
+        <view class="picker">
+          {{userInfo.dp.dpName}}
+        </view>
+    </view>
+
+
+    <view class="cu-form-group">
+      <view class="title">日期</view>
+      <picker name="date" mode="date" value="{{date}}" bindchange="DateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+    </view>
+
+
+    <view class="cu-form-group">
+      <view class="title">时间</view>
+      <picker name="time" mode="time" value="{{time}}" start="00:00" end="24:00" bindchange="TimeChange">
+        <view class="picker">
+          {{time}}
+        </view>
+      </picker>
+    </view>
+
+
+    <view class="cu-form-group">
+        <view class="title">地点</view>
+        <input name="place" type="text" maxlength="15" style="padding-left: 2em;" value="{{input}}"></input>
+    </view>
+
+    <!-- <view class="cu-form-group">
+        <view class="title">督会人员</view>
+        <input name="supervisor" type="text" maxlength="3" value="{{input}}"></input>
+    </view> -->
+
+    <view class="cu-form-group top">
+        <view class="title">会议内容</view>
+        <textarea name="content" type="text" show-confirm-bar="{{false}}" maxlength="50" value="{{input}}"></textarea>
+    </view>
+
+
+    <view class="cu-form-group top">
+      <button form-type="submit" hover-class="none">发布</button>
+    </view>
+    
+  </form>
+
+
+
+</view>

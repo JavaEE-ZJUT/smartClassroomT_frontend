@@ -1,0 +1,117 @@
+<import src="/template/loading/loading.wxml"></import>
+
+
+
+
+<view class="meeting">
+
+  <view class="meeting-content">
+
+    <!-- 没有会议 -->
+    <view class="no-meeting" wx:if="{{noMeeting && !loading}}">
+      <image src="/images/meeting/noMeeting.png"></image>
+      <text>没有会议</text>
+    </view>
+
+
+    <!-- 会议内容 -->
+    <view class="meeting-data" wx:if="{{!noMeeting && !loading}}" bindlongtap="toggleModal">
+
+
+      <view class="item dpName">{{ meeting.dp.dpName }}</view>
+
+      <view class="item">
+
+        <view class="icon">
+          <image src="/images/meeting/dpDirector.png"></image>
+        </view>
+
+        <view class="item-data">
+          <text class="label">副书记</text>
+          <text>{{ meeting.dp.dpDirector }}</text>
+        </view>
+
+      </view>
+
+      <view class="item" wx:if="{{ meeting.supervisor }}">
+
+        <view class="icon">
+          <image src="/images/meeting/supervisor.png"></image>
+        </view>
+
+        <view class="item-data">
+          <text class="label">督会人员</text>
+          <text>{{ meeting.supervisor }}</text>
+        </view>
+
+      </view>
+
+      <view class="item">
+        <view class="icon">
+          <image src="/images/meeting/time.png"></image>
+        </view>
+        <view class="item-data">
+          <text class="label">时间</text>
+          <text>{{ meeting.date }}</text>
+        </view>
+      </view>
+
+      <view class="item">
+        <view class="icon">
+          <image src="/images/meeting/place.png"></image>
+        </view>
+        <view class="item-data">
+          <text class="label">地点</text>
+          <text>{{ meeting.place }}</text>
+        </view>
+      </view>
+
+      <view class="item">
+
+        <view class="icon">
+          <image src="/images/meeting/content.png"></image>
+        </view>
+        <view class="item-data content">
+          <text class="label">会议内容</text>
+          <text>{{ meeting.content }}</text>
+        </view>
+
+      </view>
+
+    </view>
+
+
+
+
+
+
+
+  </view>
+
+
+
+  <!-- 模态框 -->
+  <view class="cu-modal {{modal ? 'show' : ''}}" bindtap="toggleModal">
+
+    <view class="cu-dialog" catchtap>
+
+      <view class="title">
+        确认删除当前会议？
+      </view>
+
+      <view class="cu-btns">
+        <button class="cu-btn" bindtap="toggleModal">取消</button>
+        <button class="cu-btn" bindtap="removeMeeting">确定</button>
+      </view>
+
+    </view>
+
+
+  </view>
+
+
+  <!-- loading -->
+  <template is="loading" wx:if="{{loading}}"></template>
+
+
+</view>

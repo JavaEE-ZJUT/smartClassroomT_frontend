@@ -1,0 +1,56 @@
+.my-custom {
+  background-color: var(--main);
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  color: var(--white);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.my-custom, .my-bar {
+  overflow: hidden;
+}
+
+.my-bar {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.action {
+  display: flex;
+  height: 60rpx;
+  width: 130rpx;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+
+.my-bar .content {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 0 10rpx;
+  margin: auto;
+  height: 60rpx;
+  cursor: none;
+  pointer-events: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.icon-back {
+  height: 60rpx;
+  margin-right: 5rpx;
+}
+
+.icon-back::before {
+  font-size: 45rpx;
+}

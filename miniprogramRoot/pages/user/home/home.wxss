@@ -1,0 +1,132 @@
+/* ----------------用户信息---------------------- */
+
+.user {
+  width: 100%;
+  /* 与发布按钮高度联系 */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 5% 12%;
+  font-family: '微软雅黑';
+  overflow: auto;
+}
+
+.user-info {
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.user-name {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.user-img {
+  display: block;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-right: 50rpx;
+  overflow: hidden;
+
+  background-color: var(--bg);
+}
+
+/* -----------------选项列表------------------- */
+
+.list {
+  height: 200rpx;
+  width: 100%;
+  margin-top: 70rpx;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+}
+
+.list-item {
+  width: 100%;
+  height: 115rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.list-item::before {
+  content: "\e6a3";
+  position: absolute;
+  top: 0;
+  right: 30rpx;
+  bottom: 0;
+  display: block;
+  margin: auto;
+  width: 30rpx;
+  height: 30rpx;
+  color: var(--grey);
+  text-align: center;
+  font-size: 34rpx;
+  font-family: cuIcon;
+  line-height: 30rpx;
+}
+
+.list-item > view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 25rpx;
+  width: 100%;
+}
+
+.list-item image {
+  display: block;
+  width: 55rpx;
+  height: 55rpx;
+  flex: 0 0 auto;
+}
+
+.label {
+  font-size: 27rpx;
+  line-height: 35rpx;
+  flex: 0 0 auto;
+}
+
+.content {
+  font-size: 22rpx;
+  line-height: 30rpx;
+  color: #757575;
+  text-align: center;
+  width: 100%;
+  word-break: break-all;
+  box-sizing: border-box;
+  padding-left: 35rpx;
+}
+
+.release {
+  width: 170rpx;
+  height: 95rpx;
+  border-radius: 39rpx;
+  background-color: var(--red);
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  margin: auto;
+  margin-bottom: 75rpx;
+}
+
+.release > image {
+  display: block;
+  width: 65rpx;
+  height: 65rpx;
+}

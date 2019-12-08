@@ -1,0 +1,30 @@
+/* @import "vendor/weui.wxss"; */
+@import "vendor/main.wxss";
+@import "vendor/icon.wxss";
+
+@font-face {
+  font-family: 'icon';
+  src:  'assets/font/icomoon.ttf';
+  font-style: normal;
+  font-display: block;
+}
+
+
+page {
+  font-family: icon;
+  --white: #fff;
+  --main: #6c51e9;
+  --red: #f1584a;
+  --main-red: #e62b25;
+  --pink: #ff7889;
+  --red1: #fe2b56;
+  --gray: rgb(223, 230, 233);
+  --bg: #e5e5e7;
+  --violet: #9c27b0;
+}
+
+
+
+
+
+

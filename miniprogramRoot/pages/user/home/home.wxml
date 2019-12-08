@@ -1,0 +1,37 @@
+<view class="user">
+
+  <view class="user-info">
+    <open-data type="userAvatarUrl" class="user-img"></open-data>
+    <open-data type="userNickName" class="user-name"></open-data>
+  </view>
+
+
+  <view class="list">
+
+    <view class="list-item">
+      <image src="/assets/images/user/mine.svg"></image>
+      <view>
+        <text class="label">个人资料</text>
+        <text class="content">{{ userInfo.dp.dpName }}</text>
+      </view>
+    </view>
+
+    <navigator class="list-item" url="/pages/user/feedback/feedback" hover-class="none">
+      <image src="/assets/images/user/feedback.svg"></image>
+      <view>
+        <text class="label">意见反馈</text>
+      </view>
+    </navigator>
+
+
+    <navigator class="list-item" url="/pages/user/developer/developer" hover-class="none">
+      <image src="/assets/images/user/developer.svg"></image>
+      <view>
+        <text class="label">开发人员</text>
+      </view>
+    </navigator>
+
+
+  </view>
+
+</view>

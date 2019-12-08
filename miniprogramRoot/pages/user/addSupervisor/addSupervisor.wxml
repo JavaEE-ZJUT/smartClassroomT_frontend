@@ -1,0 +1,64 @@
+<window-bar isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">添加督会</view>
+</window-bar>
+
+<view class="addSupervisor" style="padding-top: {{CustomBar}}px">
+
+
+  <scroll-view scroll-y style="height: calc(100vh - {{CustomBar}}px);">
+
+    <view class="container">
+
+      <view class="item"
+            wx:for="{{meetingList}}" wx:for-item="meeting" 
+            wx:for-index="index" wx:key="unique">
+
+        <view class="meeting">
+
+          <view class="meetingSummary">
+
+            <text>{{meeting.dp.dpName}}</text>
+
+            <text>{{meeting.dateString}}</text>
+
+          </view>
+
+          <view class="addIcon" bindtap="toggleForm" data-index="{{index}}">
+            <image src="/images/user/addSupervisor.png"></image>
+          </view>
+
+        </view>
+
+
+        <form class="form {{currentIndex === index ? 'show' : ''}}" 
+          bindsubmit="fromSubmit" data-index="{{index}}">
+
+            <label>
+              <text>督会人员</text>
+              <input name="supervisor" type="text"
+                  maxlength="5"></input>
+            </label>
+
+            <view class="btns">
+                <button class="cu-btn">取消</button>
+                <button class="cu-btn" form-type="submit">确定</button>
+            </view>
+
+          </form>
+
+
+      </view>
+
+
+
+
+
+
+
+    </view>
+
+  </scroll-view>
+
+
+</view>
