@@ -1,16 +1,17 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/index/index",
+    "pages/class/info/info",
+    "pages/login/login",
     "pages/test/test",
     "pages/user/addSupervisor/addSupervisor",
-    "pages/history/meeting/meeting",
+    "pages/class/meeting/meeting",
     "pages/user/developer/developer",
     "pages/user/feedback/feedback",
     "pages/user/release/release",
     "pages/user/home/home",
     "pages/homework/home/home",
-    "pages/history/home/home",
+    "pages/class/home/home",
     "pages/homework/release/release"
   ],
   "window": {

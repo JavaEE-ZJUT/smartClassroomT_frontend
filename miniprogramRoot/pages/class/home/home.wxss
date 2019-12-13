@@ -1,0 +1,55 @@
+@import "/template/loading/loading.wxss";
+
+.class {
+  width: 100%;
+  height: 100%;
+  padding: 25rpx;
+  background-color: whitesmoke;
+}
+
+
+.class-item {
+  width: 100%;
+  border-radius: 12rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 25rpx 35rpx;
+  background-color: #fff;
+  color: rgba(0, 0, 0, .7);
+}
+
+.class-item + .class-item {
+  margin-top: 35rpx;
+}
+
+.class-item .name {
+  color: var(--purple);
+  font-size: 1rem;
+  padding: 10rpx 0;
+}
+
+
+.number {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+}
+
+
+.number image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 1rem;
+}
+
+
+.number text {
+  font-size: .85rem;
+}
+
+
+
+
+
+
+

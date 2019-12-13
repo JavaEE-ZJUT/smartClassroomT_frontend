@@ -1,0 +1,25 @@
+<import src="/template/loading/loading.wxml"></import>
+
+<template is="loading" wx:if="{{loading}}"></template>
+
+
+
+<view class="class">
+
+
+  <navigator 
+    class="class-item"
+    url="/pages/class/info/info"
+    wx:for="{{classes}}">
+    <text class="name">{{item.name}}</text>
+    <view class="number">
+      <image src="/assets/images/tbar/class.svg"></image>
+      <text>班级号：{{item.number}}</text>
+    </view>
+  </navigator>
+
+
+
+
+
+</view>

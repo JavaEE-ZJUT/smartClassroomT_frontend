@@ -9,13 +9,13 @@
     wx:for="{{test}}"
     wx:key="unique">
 
-    <image src="../../../assets/images/homework/selection.svg"></image>  
+    <image src="/assets/images/homework/selection.svg"></image>  
 
     <view class="hw-info">
       <text class="title">{{item.title}}</text>
       <view class="class">
         <image 
-        src="../../../assets/images/tbar/class.svg">
+        src="/assets/images/tbar/class.svg">
         </image>
         <text>{{item.class}}</text>
       </view>

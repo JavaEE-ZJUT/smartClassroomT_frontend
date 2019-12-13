@@ -47,15 +47,15 @@
     <view class="control-bar" >
 
       <view class="left" bindtap="last">
-         <image src="/images/developer/last.png"></image>
+         <image src="/assets/images/developer/last.png"></image>
       </view>
 
       <view class="start" bindtap="toggle">
-        <image src="/images/developer/{{playing ? 'pause' : 'start'}}.png"></image>
+        <image src="/assets/images/developer/{{playing ? 'pause' : 'start'}}.png"></image>
       </view>
 
       <view class="right" bindtap="next">
-       <image src="/images/developer/next.png"></image>
+       <image src="/assets/images/developer/next.png"></image>
       </view>
       
       

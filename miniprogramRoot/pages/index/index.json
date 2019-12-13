@@ -2,7 +2,7 @@
   "usingComponents": {
      "hw": "../homework/home/home",
      "user": "../user/home/home",
-     "history": "../history/home/home"
+     "class": "../class/home/home"
   },
   "enablePullDownRefresh": false
 }

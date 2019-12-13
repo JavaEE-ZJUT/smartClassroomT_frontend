@@ -1,0 +1,42 @@
+<window-bar isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">班级信息</view>
+</window-bar>
+
+
+
+
+<view class="info" style="padding-top:{{CustomBar}}px;">
+
+  <view class="class-info">
+    <image src="/assets/images/tbar/class-active.svg"></image>
+    <text class="number">班级号：123456798</text>
+    <view class="invite">邀请学生入班</view>
+
+
+  </view>
+
+
+  <view class="show-info">
+
+    <view class="item">
+      <text class="title">班级名称</text>
+      <text class="value">英语角</text>
+    </view>
+
+    <view class="item">
+      <text class="title">班级成员</text>
+      <text class="value">10</text>
+    </view>
+
+    <view class="item">
+      <text class="title">作业历史</text>
+      <text class="value">1</text>
+    </view>
+
+
+
+
+  </view>
+
+</view>
