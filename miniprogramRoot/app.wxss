@@ -1,4 +1,3 @@
-/* @import "vendor/weui.wxss"; */
 @import "vendor/main.wxss";
 @import "vendor/icon.wxss";
 
@@ -11,9 +10,11 @@
 
 
 page {
-  font-family: icon;
+  font-family: icon, '微软雅黑';
   --white: #fff;
   --main: #6c51e9;
+  --purple: #9575cd;
+  --orange: #ea9071;
   --red: #f1584a;
   --main-red: #e62b25;
   --pink: #ff7889;

@@ -1,0 +1,33 @@
+<view class="sbar" style="height: {{StatusBar}}px;"></view>
+
+
+<view class="login">
+
+
+  <form class="form">
+
+
+
+    <radio-group>
+
+      <label class="form-item">
+        <radio checked></radio>
+        <input placeholder="账号" 
+               type="text" 
+               auto-focus="true"></input>
+      </label>
+
+      <label class="form-item">
+        <radio></radio>
+        <input placeholder="密码" type="password"></input>
+      </label>
+
+
+
+    </radio-group>
+
+    <button>登录</button>
+
+  </form>
+
+</view>

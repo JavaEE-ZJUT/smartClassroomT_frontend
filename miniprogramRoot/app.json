@@ -1,22 +1,24 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
+    "pages/test/test",
     "pages/user/addSupervisor/addSupervisor",
-    "pages/register/register",
     "pages/history/meeting/meeting",
     "pages/user/developer/developer",
     "pages/user/feedback/feedback",
     "pages/user/release/release",
     "pages/user/home/home",
-    "pages/meeting/home/home",
-    "pages/history/home/home"
+    "pages/homework/home/home",
+    "pages/history/home/home",
+    "pages/homework/release/release"
   ],
   "window": {
     "navigationStyle": "custom",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   },
   "usingComponents": {
-    "window-bar": "/components/cu-custom"
+    "window-bar": "/components/wbar/cu-custom"
   },
   "sitemapLocation": "sitemap.json"
 }

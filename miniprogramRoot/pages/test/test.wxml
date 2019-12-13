@@ -1,0 +1,48 @@
+<view class="page" style="padding-top:{{CustomBar}}px;">
+
+  <window-bar isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">试题</view>
+  </window-bar>
+
+
+  <view class="body">
+
+    <view class="choice-qs" wx:for="{{ts}}" wx:key="unique">
+      <view class="title">
+        <text>{{index+1}}.</text>
+        <text>{{item.title}}</text>
+      </view>
+      
+      <radio-group class="option">
+
+        <label class="item" 
+          wx:for="{{item.options}}" 
+          wx:for-item="option"
+          wx:for-index="opIndex"
+          wx:key="unique">
+
+          <radio class="rd"></radio>
+          <text>{{opList[opIndex]}}. {{option}}</text>
+        </label>
+
+
+      </radio-group>
+
+    </view>
+
+
+
+
+
+    <view class="submit-test">
+      <button>提交</button>
+    
+    </view>
+
+
+
+  </view>
+
+
+</view>

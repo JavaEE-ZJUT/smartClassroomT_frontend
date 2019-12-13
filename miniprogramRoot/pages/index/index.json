@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-     "meeting": "../meeting/home/home",
+     "hw": "../homework/home/home",
      "user": "../user/home/home",
      "history": "../history/home/home"
   },

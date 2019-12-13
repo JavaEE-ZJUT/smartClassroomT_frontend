@@ -1,0 +1,75 @@
+<import src="/template/loading/loading.wxml"></import>
+  <!-- loading -->
+<template is="loading" wx:if="{{loading}}"></template>
+
+<view class="hw">
+
+  <view class="ct">
+     <view class="hw-item"
+    wx:for="{{test}}"
+    wx:key="unique">
+
+    <image src="../../../assets/images/homework/selection.svg"></image>  
+
+    <view class="hw-info">
+      <text class="title">{{item.title}}</text>
+      <view class="class">
+        <image 
+        src="../../../assets/images/tbar/class.svg">
+        </image>
+        <text>{{item.class}}</text>
+      </view>
+
+      <view class="statistic">
+      
+        <view class="s-item">
+          <text>已提交</text>
+          <view class="bar">
+            <view style="width: {{item.subs / item.total * 100 }}%;"></view>
+          </view>
+          <text>{{item.subs}}/{{item.total}}</text>
+        </view>
+      
+
+        <view class="s-item">
+          <text>正确率</text>
+          <view class="bar">
+            <view style="width: {{item.rrate * 100}}%;"></view>
+          </view>
+          <text>{{item.rrate * 100}}%</text>
+        </view>
+      
+      </view>
+
+    
+    </view>
+
+
+
+
+  </view>
+
+
+  <navigator class="release-hw" url="/pages/test/test">
+    <image src="../../../assets/images/homework/release.svg"></image>
+  </navigator>
+
+
+
+
+ 
+
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
