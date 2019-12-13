@@ -28,30 +28,6 @@ Component({
         total: 30,
         subs: 23,
         rrate: 0.83
-      }, {
-        title: '第三次作业',
-        'class': '三年级二班',
-        total: 30,
-        subs: 23,
-        rrate: 0.83
-      }, {
-        title: '第三次作业',
-        'class': '三年级二班',
-        total: 30,
-        subs: 23,
-        rrate: 0.83
-      }, {
-        title: '第三次作业',
-        'class': '三年级二班',
-        total: 30,
-        subs: 23,
-        rrate: 0.83
-      }, {
-        title: '第三次作业',
-        'class': '三年级二班',
-        total: 30,
-        subs: 23,
-        rrate: 0.83
       }
     ]
   },
