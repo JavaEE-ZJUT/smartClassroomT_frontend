@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   padding: 25rpx;
-  background-color: whitesmoke;
+  position: relative;
 }
 
 
@@ -47,6 +47,31 @@
   font-size: .85rem;
 }
 
+
+
+
+
+
+/* --------------
+    底部加号
+  --------------- */
+
+.add {
+  position: absolute;
+  bottom: 50rpx;
+  right: 90rpx;
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 100%;
+  padding: 25rpx;
+  box-sizing: border-box;
+  background-color: var(--main);
+}
+
+.add image {
+  width: 100%;
+  height: 100%;
+}
 
 
 

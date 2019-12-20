@@ -10,7 +10,7 @@ App({
     -------------------------- */
   onLaunch: function() {
 
-    // wx.cloud.init();
+    wx.cloud.init();
 
 
     // 获取缓存信息
@@ -22,42 +22,6 @@ App({
     //   }
     // })
 
-
-    /* ---------------------
-        登录
-       --------------------- */
-
-    // let userInfo = wx.getStorageSync('userInfo');
-
-    // console.log('----------- userInfo app.js -----------------');
-    // console.log(userInfo);
-
-    // if(userInfo) {
-    //   this.globalData.userInfo = userInfo;
-
-    //   // 更新用户信息
-    //   wx.cloud.callFunction({
-    //     name: 'login'
-    //   })
-
-    //   .then(({result: res}) => {
-    //     wx.setStorage({
-    //       key: 'userInfo',
-    //       data: res.data
-    //     })
-    //   })
-
-    //   .catch(err => {
-    //     console.error(err);
-    //   })
-
-    // } else {
-
-    //   wx.reLaunch({
-    //     url: 'pages/register/register',
-    //   });
-
-    // }
 
 
     /* ---------------------

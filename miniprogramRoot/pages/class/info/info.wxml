@@ -8,34 +8,38 @@
 
 <view class="info" style="padding-top:{{CustomBar}}px;">
 
-  <view class="class-info">
-    <image src="/assets/images/tbar/class-active.svg"></image>
-    <text class="number">班级号：123456798</text>
-    <view class="invite">邀请学生入班</view>
-
-
-  </view>
-
-
   <view class="show-info">
 
     <view class="item">
       <text class="title">班级名称</text>
-      <text class="value">英语角</text>
+      <text class="value">{{classInfo.className}}</text>
     </view>
 
     <view class="item">
-      <text class="title">班级成员</text>
-      <text class="value">10</text>
+      <text class="title">班级编号</text>
+      <text class="value">{{classInfo.classId}}</text>
     </view>
 
     <view class="item">
-      <text class="title">作业历史</text>
-      <text class="value">1</text>
+      <text class="title">教室</text>
+      <text class="value">{{classInfo.classClassroom}}</text>
     </view>
 
+    <view class="item">
+      <text class="title">开课学年</text>
+      <text class="value">{{classInfo.classOpenyear}}</text>
+    </view>
 
+    <!-- <navigator 
+      class="item label"
+      url="/pages/class/ppt/ppt">
+      <text class="title">课程ppt</text>
+    </navigator> -->
 
+    <navigator class="item label" url="/pages/class/update/update">
+      <text class="title">修改课程信息</text>
+      <!-- <text class="value">{{classInfo.classOpenyear}}</text> -->
+    </navigator>
 
   </view>
 

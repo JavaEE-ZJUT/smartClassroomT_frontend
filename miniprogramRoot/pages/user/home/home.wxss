@@ -11,6 +11,8 @@
   padding: 5% 12%;
   font-family: '微软雅黑';
   overflow: auto;
+
+  background-color: var(--bg);
 }
 
 .user-info {

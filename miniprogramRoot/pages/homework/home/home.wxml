@@ -6,21 +6,22 @@
 
   <view class="ct">
      <view class="hw-item"
-    wx:for="{{test}}"
+    wx:for="{{paper}}"
     wx:key="unique">
 
     <image src="/assets/images/homework/selection.svg"></image>  
 
     <view class="hw-info">
-      <text class="title">{{item.title}}</text>
-      <view class="class">
+      <text class="title">{{item.paperName}}</text>
+
+      <!-- <view class="class">
         <image 
         src="/assets/images/tbar/class.svg">
         </image>
-        <text>{{item.class}}</text>
-      </view>
+        <text>{{item.name}}</text>
+      </view> -->
 
-      <view class="statistic">
+      <!-- <view class="statistic">
       
         <view class="s-item">
           <text>已提交</text>
@@ -39,7 +40,7 @@
           <text>{{item.rrate * 100}}%</text>
         </view>
       
-      </view>
+      </view> -->
 
     
     </view>
@@ -50,8 +51,8 @@
   </view>
 
 
-  <navigator class="release-hw" url="/pages/test/test">
-    <image src="../../../assets/images/homework/release.svg"></image>
+  <navigator class="release-hw" url="/pages/paper/test/test">
+    <image src="/assets/images/homework/release.svg"></image>
   </navigator>
 
 

@@ -1,0 +1,43 @@
+<window-bar isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">修改班级信息</view>
+</window-bar>
+
+
+<view class="release" style="padding-top:{{CustomBar}}px;">
+
+  <form class="form" 
+        report-submit="true"
+        report-submit-timout="5"
+        bindsubmit="formSubmit">
+
+    <view class="cu-form-group">
+      <view class="title">班级名</view>
+      <input name="className" type="text" maxlength="15" 
+            style="padding-left: 3em;" 
+            value="{{classInfo.className}}"></input>
+    </view>
+
+
+
+    <view class="cu-form-group">
+      <view class="title">教室</view>
+      <input name="classClassroom" type="text" maxlength="15" style="padding-left: 4em;" value="{{classInfo.classClassroom}}"></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class="title">开课学年</view>
+      <input name="classOpenyear" type="number" maxlength="15" style="padding-left: 2em;" value="{{classInfo.classOpenyear}}"></input>
+    </view>
+
+
+
+    <view class="cu-form-group top">
+      <button form-type="submit" hover-class="none">修改</button>
+    </view>
+
+  </form>
+
+
+
+</view>

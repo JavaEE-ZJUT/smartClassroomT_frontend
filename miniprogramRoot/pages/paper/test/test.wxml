@@ -1,0 +1,64 @@
+<view class="page" style="padding-top:{{CustomBar}}px;">
+
+  <window-bar isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">试题</view>
+  </window-bar>
+
+
+  <view class="body">
+
+    <view class="choice-qs active" 
+          wx:for="{{paper}}" 
+          wx:key="unique">
+      
+      <view class="title">
+        <text>{{index+1}}.</text>
+        <text>{{item.problemInfo}}</text>
+      </view>
+      
+      <view class="option">
+
+        <view class="item {{item.problemAns == 1 ? 'active' : ''}}">
+          <text>A. </text>
+          <text>{{item.problemChoose1}}</text>
+        </view>
+
+        <view class="item {{item.problemAns == 2 ? 'active' : ''}}">
+          <text>B. </text>
+          <text>{{item.problemChoose2}}</text>
+        </view>
+
+        <view class="item {{item.problemAns == 3 ? 'active' : ''}}">
+          <text>C. </text>
+          <text>{{item.problemChoose3}}</text>
+        </view>
+
+        <view class="item {{item.problemAns == 4 ? 'active' : ''}}">
+          <text>D. </text>
+          <text>{{item.problemChoose4}}</text>
+        </view>
+
+      </view>
+
+      <view class="explain">
+        {{item.problemExplain}}      
+      </view>
+
+    </view>
+
+
+
+
+
+    <view class="submit-test">
+      <button>提交</button>
+    
+    </view>
+
+
+
+  </view>
+
+
+</view>

@@ -1,0 +1,188 @@
+page, .page {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #eee;
+  padding: 17rpx;
+  font-family: '微软雅黑';
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /* background-color: greenyellow; */
+}
+
+.body::before {
+  content: '';
+  display: flex;
+}
+
+.choice-qs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+  padding: 25rpx;
+  padding-top: 35rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+
+  position: relative;
+}
+
+
+.choice-qs.active::after {
+  content: '';
+  width: 50%;
+  height: 10rpx;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  background-color: var(--main);
+  border-radius: 200px;
+}
+
+
+
+
+
+.choice-qs .title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: .8rem;
+  line-height: 50rpx;
+  position: relative;
+  color: rgba(0, 0, 0, .7);
+}
+
+.choice-qs .title text:first-child {
+  width: 45rpx;
+  flex: 0 0 auto;
+  font-weight: bold;
+  color: var(--main);
+}
+
+.choice-qs .title text:last-child {
+  flex: 1 1 auto;
+}
+
+
+
+.choice-qs  .option {
+  margin-top: 20rpx;
+  width: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  flex-direction: column;
+
+}
+
+.choice-qs .option .item {
+  flex: 0 0 auto;
+  display: flex;
+  width: 100%;
+  font-size: 30rpx;
+
+  padding: 10rpx;
+  margin: 10rpx;
+
+
+  border-radius: 100px;
+
+  transform: scale(1, 1);
+  transition: all 0.1s ease-in-out 0s;
+  padding-left: 20rpx;
+  position: relative;
+}
+
+.choice-qs .option .item text:first-child {
+  margin-right: 10rpx;
+}
+
+.choice-qs + .choice-qs {
+  margin-top: 50rpx;
+}
+
+
+.item text {
+  position: relative;
+  font-size: .75rem;
+  color: rgba(0, 0, 0, .5);
+}
+
+.item.active text{
+  /* background-image: linear-gradient(to right, rgba(108, 92, 231, .5) 0%,
+   rgba(162, 155, 254, .3) 100%); */
+  color: var(--main);
+}
+
+.item.active text:last-child:after{
+  /* content: '';
+  width: 110%;
+  height: 25rpx;
+  position: absolute;
+  left: -5%;
+  bottom: -7rpx;
+  border-radius: 20rpx;
+  z-index: -5;
+  background-image: linear-gradient(to right, rgba(108, 92, 231, .8) 0%,
+   rgba(162, 155, 254, .5) 100%); */
+}
+
+
+/* -----------
+    提交测试
+   ----------- */
+
+.submit-test {
+  width: 100%;
+  height: 260rpx;
+  padding-top: 50rpx;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.submit-test button {
+  width: 55%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: .9rem;
+  font-weight: normal;
+  border: none;
+  background-color: var(--main);
+  color: #fff;
+  border-radius: 12rpx;
+}
+
+
+
+.explain {
+  font-size: .8rem;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, .5);
+  width: 100%;
+  padding: 25rpx 45rpx;
+  /* background-color: var(--purple); */
+  border-top: 3rpx solid rgba(0, 0, 0, .1);
+}
+
+
+
+
+
+
+
+
+
+

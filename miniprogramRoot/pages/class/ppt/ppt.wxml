@@ -1,0 +1,20 @@
+<window-bar isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">课程PPT</view>
+</window-bar>
+
+
+
+<view class="ppt" style="padding-top: {{CustomBar}}px;">
+
+  <view 
+    class="item"
+    wx:for="{{pptInfo}}"
+    wx:key="unique">
+    <image src="/assets/images/course/ppt.png"></image>
+    <text class="title">{{item.pptName}}</text>
+    <image src="/assets/images/course/download.png"></image>
+  </view>
+
+
+</view>

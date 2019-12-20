@@ -1,5 +1,11 @@
-const app = getApp();
-var util = require('../../../utils/util.js');
+const {
+  globalData
+} = getApp();
+
+
+
+const Util = require('../../../utils/util.js');
+const rq = require('../../../utils/rq.js');
 
 
 Component({
@@ -10,35 +16,62 @@ Component({
 
 
   data: {
-    CustomBar: app.globalData.CustomBar,
+    CustomBar: globalData.CustomBar,
     loading: 0,
-    classes: [
-      {
-        name: '英语角',
-        number: '20191234568'
-      }, {
-        name: '数学课',
-        number: '20191789685'
-      }, {
-        name: '科学课',
-        number: '20191123789'
-      }
-    ]
+    classes: []
   },
-
-
-  methods: {
-
 
   lifetimes: {
 
     attached() {
 
+      this.getData();
 
+    }
+
+  },
+
+  methods: {
+
+    getData() {
+      
+      rq({
+        path: '/class/getClassesByTeahcerid',
+        query: {
+          teacherId: 1
+        }
+      })
+
+        .then(res => {
+          if (res.status == 'success') {
+
+            this.setData({
+              classes: res.data
+            });
+          }
+
+        })
+
+        .catch(Util.requestFail)
+    },
+
+    tapClass(evt) {
+
+      let { dataset } = evt.currentTarget;
+
+      globalData.classInfo = dataset.info;
+
+      wx.navigateTo({
+        url: dataset.url
+      })
+
+    }
+  },
+
+  pageLifetimes: {
+    show() {
+      this.getData();
     }
   }
 
-  
-
-  }
 })

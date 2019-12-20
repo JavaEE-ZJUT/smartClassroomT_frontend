@@ -1,4 +1,9 @@
-const { globalData } = getApp();
+const {
+  globalData
+} = getApp();
+
+const Util = require('../../../utils/util.js');
+const rq = require('../../../utils/rq.js');
 
 Page({
 
@@ -6,7 +11,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    classInfo: {},
     CustomBar: globalData.CustomBar,
   },
 
@@ -14,9 +18,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      classInfo: globalData.classInfo
-    });
+    this.data.classInfo = globalData.classInfo;
+    let { classInfo } = globalData;
+    rq({
+      path: '/course/getPPTsByCourseId',
+      query: {
+        courseId: classInfo.courseId
+      }
+    })
+    .then(res => {
+      if (res.status == 'success') {
+        this.setData({
+          pptInfo: res.data
+        })
+      }
+    })
+    .catch(Util.requestFail)
   },
 
   /**
@@ -30,10 +47,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(this.data.classInfo);
-      this.setData({
-        classInfo: this.data.classInfo
-      })
+
   },
 
   /**

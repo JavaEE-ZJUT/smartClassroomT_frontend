@@ -69,24 +69,31 @@ static  getDate(dateString) {
   static showToast = (function() {
 
     let types = {
-      connectFail: {
-        title: '网络请求失败',
-        image: './images/prompt/offline.png'
+
+      success: {
+        title: '成功'
       },
+
+      fail: {
+        title: '失败',
+        image: '/assets/tips/fail.png'
+      }
 
     };
 
-    return function(item, icon) {
-      let target = types[item];
+    return function({title, s}) {
+      let target;
 
-      if (!target) {
-        target = {
-          title: item,
-        }
+      if(s) {
+        target = types.success;
+      } else {
+        target = types.fail;
       }
 
+      if(title) {
+        target.title = title;
+      }
 
-      target.icon = icon || 'none';
       target.mask = true;
       target.duration = 1500;
       wx.showToast(target);
@@ -129,11 +136,18 @@ static  getDate(dateString) {
      ------------------- */
 
   static requestFail(err) {
-    if (/^-40/.test(err.errCode)) {
-      Util.showToast('网络请求失败');
-    } else {
-      Util.showToast('系统错误');
+    let tips = {
+      title: '系统错误', 
+      s: 0
+    };
+
+
+    if (err.errMsg == "request:fail ") {
+      tips.title = '网络请求失败';
     }
+
+    Util.showToast(tips);
+
     console.error(err);
   }
 }

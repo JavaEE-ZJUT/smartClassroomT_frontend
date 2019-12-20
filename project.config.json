@@ -7,11 +7,12 @@
 	},
 	"setting": {
 		"urlCheck": false,
-		"es6": true,
+		"es6": false,
 		"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"nodeModules": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
@@ -24,7 +25,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.3",
+	"libVersion": "2.9.4",
 	"appid": "wx44c0f6132e933e71",
 	"projectname": "minclass",
 	"debugOptions": {
@@ -69,6 +70,14 @@
 					"id": -1,
 					"name": "pages/index/test",
 					"pathName": "pages/index/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/paper/test/test",
+					"pathName": "pages/paper/test/test",
+					"query": "",
 					"scene": null
 				}
 			]
