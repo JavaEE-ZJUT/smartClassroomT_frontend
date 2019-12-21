@@ -26,7 +26,7 @@
           bindtap="changeCur" data-cur="homeWork"
           animation="{{ PageCur === 'homeWork' ? tabAnim : '' }}">
       <image 
-      src="/assets/images/tbar/homeWork{{PageCur === 'homeWork' ? '-active' : ''}}.svg">
+      src="/assets/images/tbar/homeWork{{PageCur === 'homeWork' ? '-active' : ''}}.png">
       </image>
       <text>作业</text>
     </view>
@@ -35,16 +35,28 @@
           bindtap="changeCur" data-cur="class"
           animation="{{ PageCur === 'class' ? tabAnim : '' }}">
       <image 
-      src="/assets/images/tbar/class{{PageCur === 'class' ? '-active' : ''}}.svg">
+      src="/assets/images/tbar/class{{PageCur === 'class' ? '-active' : ''}}.png">
       </image>
       <text>班级</text>
     </view>
+
+    <view class="item {{PageCur === 'problem' ? 'active' : ''}}"
+          bindtap="changeCur" data-cur="problem"
+          animation="{{ PageCur === 'problem' ? tabAnim : '' }}">
+      <image 
+      src="/assets/images/tbar/problem{{PageCur === 'problem' ? '-active' : ''}}.png">
+      </image>
+      <text>题库</text>
+    </view>
+
+
+
 
     <view class="item {{PageCur === 'mine' ? 'active' : ''}}"
           bindtap="changeCur" data-cur="mine"
           animation="{{ PageCur === 'mine' ? tabAnim : '' }}">
       <image 
-      src="/assets/images/tbar/mine{{PageCur === 'mine' ? '-active' : ''}}.svg">
+      src="/assets/images/tbar/mine{{PageCur === 'mine' ? '-active' : ''}}.png">
       </image>
       <text>我的</text>
     </view>

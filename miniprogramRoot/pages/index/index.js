@@ -12,7 +12,7 @@ Page({
   // tabbar改变页面
   changeCur: (function() {
 
-    let duration = 100;
+    let duration = 70;
     let tabAnim = wx.createAnimation({
       duration,
       timingFunction: 'linear',
@@ -26,7 +26,7 @@ Page({
 
       if (pageCur !== cur) {
 
-        tabAnim.scale(0.6).step();
+        tabAnim.scale(0.5).step();
         tabAnim.scale().step();
 
         let
@@ -36,11 +36,6 @@ Page({
             PageCur: cur,
             tabAnim: tabAnim.export()
           };
-
-        if (!showed[cur]) {
-          showed[cur] = 1;
-          data.showed = showed;
-        }
 
         this.setData(data);
 
