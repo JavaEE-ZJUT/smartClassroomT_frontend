@@ -29,6 +29,7 @@ Component({
       })
       .then(res => {
         if (res.status == 'success') {
+          
           this.setData({
             paper: res.data
           })

@@ -3,10 +3,16 @@
 .class {
   width: 100%;
   height: 100%;
-  padding: 25rpx;
   position: relative;
 }
 
+
+.class .ct {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 25rpx;
+}
 
 .class-item {
   width: 100%;

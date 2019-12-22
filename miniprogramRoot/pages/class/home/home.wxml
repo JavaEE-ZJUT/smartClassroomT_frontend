@@ -4,8 +4,12 @@
 
 
 
+
+
 <view class="class">
 
+
+<view class="ct">
 
   <view class="class-item" data-url="/pages/class/info/info" data-info="{{item}}" wx:for="{{classes}}" wx:key="unique" bindtap="tapClass">
     <text class="name">{{item.className}}</text>
@@ -13,6 +17,11 @@
       <image src="/assets/images/tbar/class.png"></image>
       <text>班级号：{{item.classId}}</text>
     </view>
+  </view>
+
+
+
+
   </view>
 
 

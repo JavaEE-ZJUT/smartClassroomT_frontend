@@ -45,6 +45,13 @@ Component({
         .then(res => {
           if (res.status == 'success') {
 
+
+            for (let i = 0; i < 10; i++) {
+              res.data.push(res.data[0]);
+            }
+
+
+
             this.setData({
               classes: res.data
             });

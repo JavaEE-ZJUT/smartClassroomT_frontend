@@ -5,6 +5,7 @@
 <view class="hw">
 
   <view class="ct">
+  
      <view class="hw-item"
     wx:for="{{paper}}"
     wx:key="unique">
