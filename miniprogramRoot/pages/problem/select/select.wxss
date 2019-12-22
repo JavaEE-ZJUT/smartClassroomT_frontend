@@ -1,0 +1,184 @@
+page, .page {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 17rpx;
+  font-family: '微软雅黑';
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.body::before {
+  content: '';
+  display: flex;
+}
+
+.choice-qs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 25rpx;
+  padding-top: 35rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  transition: all 0.1s ease-in-out 0s;
+  position: relative;
+}
+
+.choice-qs.active::after {
+  content: '';
+  width: 50%;
+  height: 7rpx;
+  position: absolute;
+  top: -1rpx;
+  left: 25%;
+  background-color: var(--main);
+  border-radius: 200px;
+}
+
+.choice-qs.active {
+  box-shadow: 0 4rpx 4rpx rgba(0, 0, 0, 0.15);
+}
+
+.choice-qs .title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.8rem;
+  line-height: 50rpx;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* --------------
+    折叠控制图标
+  ---------------- */
+
+.choice-qs.fold .title .icon-right {
+  transform: rotate(90deg);
+}
+
+.title .icon-right {
+  transition: all 0.1s ease-in-out 0s;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100rpx;
+  height: 100rpx;
+  flex: 0 0 auto;
+  /* background-color: aqua; */
+}
+
+.title .icon-right::before {
+  /* background-color: blue; */
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.choice-qs .title text:first-child {
+  width: 45rpx;
+  flex: 0 0 auto;
+  font-weight: bold;
+  color: var(--main);
+}
+
+.choice-qs .title text:last-child {
+  flex: 1 1 auto;
+}
+
+.choice-qs  .option {
+  margin-top: 20rpx;
+  width: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  padding: 0 35rpx;
+  box-sizing: border-box;
+  flex-direction: column;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.choice-qs .option .item {
+  flex: 0 0 auto;
+  display: flex;
+  width: 100%;
+  font-size: 30rpx;
+  padding: 10rpx;
+  margin: 10rpx;
+  border-radius: 100px;
+  transform: scale(1, 1);
+  transition: all 0.1s ease-in-out 0s;
+  padding-left: 20rpx;
+  position: relative;
+}
+
+.choice-qs .option .item text:first-child {
+  margin-right: 10rpx;
+}
+
+.choice-qs + .choice-qs {
+  margin-top: 50rpx;
+}
+
+.item text {
+  position: relative;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.item.active text {
+  color: var(--main);
+}
+
+/* --------------------
+    折叠
+  --------------------- */
+
+.choice-qs.fold {
+}
+
+.choice-qs.fold  .option, .choice-qs.fold .explain {
+  display: none !important;
+}
+
+/* -----------
+    提交试卷
+   ----------- */
+
+.submit {
+  width: 100%;
+  height: 260rpx;
+  padding-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit button {
+  width: 55%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 0.9rem;
+  font-weight: normal;
+  border: none;
+  background-color: var(--main);
+  color: #fff;
+  border-radius: 12rpx;
+}
+
+.explain {
+  font-size: 0.8rem;
+  line-height: 2;
+  color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 15rpx 45rpx;
+  border-top: 2rpx solid rgba(0, 0, 0, 0.05);
+  transition: all 0.1s ease-in-out 0s;
+}

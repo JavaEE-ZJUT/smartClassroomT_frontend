@@ -16,9 +16,12 @@ Page({
     StatusBar: globalData.StatusBar,
     CustomBar: globalData.CustomBar,
 
-    opList: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
-
     paper: [],
+
+    idList: {
+      1: 1
+    },
+    fold: -1,
 
     ts: [{
         title: '下列动画作品中，那一部是由京都动画公司制作的',
@@ -39,6 +42,39 @@ Page({
     ]
   },
 
+
+  select(evt) {
+    let idList = this.data.idList;
+    let id = evt.currentTarget.dataset.id;
+    
+    if(idList[id]) {
+      idList[id] = 0;
+    } else {
+      idList[id] = 1;
+    }
+    
+    this.setData({
+      idList
+    })
+  },
+
+  fold(evt) {
+    let id = evt.currentTarget.dataset.id;
+
+    if(id == this.data.fold) {
+      id = -1;
+    }
+
+
+    this.setData({
+      fold: id
+    });
+  },
+
+
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -55,16 +91,10 @@ Page({
       }
         console.log(res);
     })
-    .catch(err => {
-
-    })
-
-
-
-
-
+    .catch(Util.requestFail);
 
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

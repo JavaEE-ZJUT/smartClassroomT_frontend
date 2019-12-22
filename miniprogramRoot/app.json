@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/class/info/info",
     "pages/login/login",
-    "pages/paper/test/test",
+    "pages/problem/select/select",
     "pages/user/addSupervisor/addSupervisor",
     "pages/class/meeting/meeting",
     "pages/user/developer/developer",
@@ -15,7 +15,9 @@
     "pages/homework/release/release",
     "pages/class/update/update",
     "pages/class/ppt/ppt",
-    "pages/class/add/add"
+    "pages/class/add/add",
+    "pages/problem/home/home",
+    "pages/problem/add/add"
   ],
   "window": {
     "navigationStyle": "custom",

@@ -12,6 +12,11 @@
 
 <class wx:if="{{PageCur ===  'class'}}"></class>
 
+<problem wx:if="{{PageCur ===  'problem'}}"></problem>
+
+
+ 
+
 </view>
 
 

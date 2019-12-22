@@ -37,7 +37,7 @@ module.exports = async({
       success({
         data: res
       }) {
-        resolve(res);
+          resolve(res);
       },
       fail(err) {
         reject(err);
