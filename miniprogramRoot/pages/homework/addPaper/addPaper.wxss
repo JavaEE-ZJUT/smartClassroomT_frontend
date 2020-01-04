@@ -1,0 +1,117 @@
+/* pages/homework/addPaper/addPaper.wxss */
+@import "/template/loading/loading.wxss";
+
+.class {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+.class .ct {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 25rpx;
+}
+
+.class-item {
+  width: 100%;
+  border-radius: 12rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 25rpx 35rpx;
+  background-color: #fff;
+  color: rgba(0, 0, 0, .7);
+}
+
+.class-item + .class-item {
+  margin-top: 35rpx;
+}
+
+.class-item .name {
+  color: var(--purple);
+  font-size: 1rem;
+  padding: 10rpx 0;
+}
+
+
+.number {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+}
+
+
+.number image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 1rem;
+}
+
+
+.number text {
+  font-size: .85rem;
+}
+
+
+
+
+
+
+/* --------------
+    底部加号
+  --------------- */
+
+.add {
+  position: absolute;
+  bottom: 50rpx;
+  right: 90rpx;
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 100%;
+  padding: 25rpx;
+  box-sizing: border-box;
+  background-color: var(--main);
+}
+
+.add image {
+  width: 100%;
+  height: 100%;
+}
+
+
+.btn {
+  display: inline-block;
+  border: 1px solid red;
+  background-color: red;
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+
+  margin-left: auto;
+  position: relative;
+  top: -56px;
+}
+
+.btn_content {
+  line-height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.arrow{
+    position: absolute;
+    top:38px;
+    left: 20px;
+    width: 14px;
+    height: 14px;
+    border-bottom: 2px solid var(--main);
+    border-left: 2px solid var(--main);
+    transform: rotate(45deg);
+    z-index: 99;
+}

@@ -1,0 +1,50 @@
+<!--pages/problem/update/update.wxml-->
+<view class='arrow' bindtap="back"></view>
+<view style="padding-left: 35px;padding-top: 50px;">
+<form style="font-size: 20px;margin-top: 100px;margin-left: 40px;" bindsubmit="updateProblem">
+    <view class="title">
+        <text>题干：</text>
+        <textarea name="problemInfo" value="{{problem.problemInfo}}" bindinput='inputchange' auto-height class="mytextarea"/>
+    </view>
+
+    <view class="option" style="margin-top: 20px;">
+        <view class="item">
+          <text>A. </text>
+          <textarea name="problemChoose1" value="{{problem.problemChoose1}}" bindinput='inputchange' auto-height class="mytextarea"></textarea>
+        </view>
+
+        <view class="item">
+          <text>B. </text>
+          <textarea name="problemChoose2" value="{{problem.problemChoose2}}" bindinput='inputchange' auto-height class="mytextarea"></textarea>
+        </view>
+
+        <view class="item">
+          <text>C. </text>
+          <textarea name="problemChoose3" value="{{problem.problemChoose3}}" bindinput='inputchange' auto-height class="mytextarea"></textarea>
+        </view>
+
+        <view class="item">
+          <text>D. </text>
+          <textarea name="problemChoose4" value="{{problem.problemChoose4}}"  bindinput='inputchange' auto-height class="mytextarea"/>
+        </view>
+
+        <view class="item">
+          <text>正确选项： </text>
+          <radio-group bindchange="radiochange">
+              <radio value='0' checked="{{problem.problemAns==0}}">A</radio>
+              <radio value='1' checked="{{problem.problemAns==1}}" style="margin-left: 10px;">B</radio>
+              <radio value='2' checked="{{problem.problemAns==2}}" style="margin-left: 10px;">C</radio>
+              <radio value='3' checked="{{problem.problemAns==3}}" style="margin-left: 10px;">D</radio>
+          </radio-group>
+          <!-- <textarea name="problemAns" value="测试测试"  bindinput='inputchange' auto-height class="mytextarea" style="height:50px;"/> -->
+        </view>
+    </view>
+
+    <textarea name="problemExplain" value="{{problem.problemExplain}}"  bindinput='inputchange' auto-height class="mytextarea" style="margin-top: 40px;"/>
+
+
+  <button class="button" style="margin-left: auto;margin-right: auto;margin-top: 30px;margin-bottom: 10px;" form-type="submit">
+        <text class="btn_content">确认修改</text>
+  </button>
+</form>
+</view>

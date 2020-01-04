@@ -1,0 +1,19 @@
+<!--pages/homework/addPaper/addPaper.wxml-->
+<import src="/template/loading/loading.wxml"></import>
+
+<template is="loading" wx:if="{{loading}}"></template>
+<view class='arrow' bindtap="back"></view>
+<view class="class">
+  <view class="ct" style="margin-top: 100px;">
+    <view class="class-item" data-url="/pages/class/info/info" data-info="{{item}}" wx:for="{{papers}}" wx:key="unique" bindtap="tapClass" style="height: 95px;">
+      <text class="name">{{item.paperName}}</text>
+      <view class="number">
+        <image src="/assets/images/tbar/class.png"></image>
+        <text>练习号：{{item.paperId}}</text>
+      </view>
+      <view class="btn" bindtap="add" data-id="{{item.paperId}}">
+        <view class="btn_content">添加</view>
+      </view>
+    </view>
+  </view>
+</view>

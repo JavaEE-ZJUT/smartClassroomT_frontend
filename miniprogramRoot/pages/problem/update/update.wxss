@@ -1,0 +1,44 @@
+/* pages/problem/update/update.wxss */
+.content {
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    border: 1px solid var(--main);
+    padding: 2px;
+    height: 30px;
+    border-radius: 5px;
+}
+.mytextarea {
+  height: 34px;
+  border: 1px solid var(--main);
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.button {
+  height: 50px;
+  width: 150px;
+  background-color: var(--main);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+.btn_content {
+  line-height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow{
+  position: absolute;
+  top:38px;
+  left: 20px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid var(--main);
+  border-left: 2px solid var(--main);
+  transform: rotate(45deg);
+  z-index: 99;
+}
