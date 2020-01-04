@@ -1,0 +1,101 @@
+<!--pages/homework/detail/detail.wxml-->
+<import src="/template/loading/loading.wxml"></import>
+<template is="loading" wx:if="{{loading}}"></template>
+<view class='arrow' bindtap="back"></view>
+
+<scroll-view scroll-x class="bg-white nav text-center fixed" style="top:80px;">
+  <view class="cu-item {{index==TabCur?'underline':''}}" wx:for="{{tabNav}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+    {{tabNav[index]}}
+  </view>
+</scroll-view>
+
+<view style="margin-top: 128px;padding-top: 10px;" wx:if="{{TabCur==0}}">
+    <form class="hw-item" 
+          style="margin-top: 20px;width: 87%;" bindsubmit="updateCourse">
+        <view style="margin-top:20px;">
+            <text class="mytitle">课程名称：</text>
+            <input class="content" 
+                    value="{{courseName}}" 
+                    bindinput="changetext"
+                    name="courseName">
+            </input>
+        </view>
+        <view style="margin-top:10px;">
+            <text class="mytitle">课程描述：</text>
+            <input class="content" 
+                   value="{{courseDetail}}"
+                   name="courseDetail"></input>
+        </view>
+        <view style="margin-top:10px;">
+            <text class="mytitle">课程考核：</text>
+            <input class="content" value="{{courseMethod}}"></input>
+        </view>
+        <view style="margin-top:10px;">
+            <text class="mytitle">课程学分：</text>
+            <input class="content" 
+                   value="{{courseCredit}}"
+                   name="courseCredit"></input>
+        </view>
+        <view style="margin-top:10px;">
+            <text class="mytitle">课程图片</text>
+            <image src="{{coursePicUrl}}" 
+                  style="width: 150px;height: 150px;display:inline-block">
+            </image>
+        </view>
+        <button class="button" 
+                style="margin-left: auto;margin-right: auto;margin-top: 30px;margin-bottom: 10px;"
+                form-type="submit">
+            <text class="btn_content">确认修改</text>
+        </button>
+    </form>
+</view>
+
+<view class="hw-item" 
+      wx:if="{{TabCur==1}}" 
+      style="margin-top: 158px;padding-top: 20px;" >
+    <view wx:for="{{ppts}}" style="margin-bottom: 10px;margin-top:20px;">
+        <view style="font-size:20px;display:inline-block;">PPT名称</view>
+        <view style="font-size:20px;display:inline-block;margin-left:20px;">{{item.pptName}}</view>
+        <view bindtap="download"
+              style="text-decoration-line: underline;text-decoration-color: var(--main);color:var(--main)"
+              data-url= "{{item.pptUrl}}"
+        > 点击此处下载 </view>
+    </view>
+</view>
+<form class="hw-item" wx:if="{{TabCur==1}}" bindsubmit="addPPT">
+     <view style="margin-top:10px;">
+        <text class="mytitle">PPT名称：</text>
+        <input class="content" 
+                value="{{pptName}}"
+                name="pptName"></input>
+    </view>
+    <view style="margin-top:10px;">
+        <view class="mytitle">上传PPT</view>
+        <text class="iconfont icon-shangchuan" 
+              style='width:20px;height:20px;margin-left: 20px;'
+              bindtap='uploadPic'></text>
+    </view>
+    <button class="button" 
+            style="margin-left: auto;margin-right: auto;margin-top: 30px;margin-bottom: 10px;"
+            form-type="submit">
+        <text class="btn_content">添加PPT</text>
+    </button>
+</form>
+
+<view class="hw-item" wx:if="{{TabCur==2}}" 
+      style="margin-top: 158px;padding-top: 20px;" >
+    <view wx:for="{{papers}}" style="margin-bottom: 10px;margin-top:10px;">
+        <view style="font-size:20px;display:inline-block;">练习名称：</view>
+        <view style="font-size:20px;display:inline-block;margin-left:20px;">{{item.paperName}}</view>
+        <view bindtap="gotoPaper1"
+              style="text-decoration-line: underline;text-decoration-color: var(--main);color:var(--main)"
+              data-paperid= "{{item.paperId}}" data-paperName= "{{item.paperName}}"
+        > 点击进入练习 </view>
+    </view>
+    <button class="button" 
+            style="margin-left: auto;margin-right: auto;margin-top: 30px;margin-bottom: 10px;" 
+            bindtap="addpaper" >
+        <text class="btn_content">添加练习</text>
+    </button>
+</view>
+

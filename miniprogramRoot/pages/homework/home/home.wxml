@@ -3,75 +3,16 @@
 <template is="loading" wx:if="{{loading}}"></template>
 
 <view class="hw">
-
-  <view class="ct">
-  
-     <view class="hw-item"
-    wx:for="{{paper}}"
-    wx:key="unique">
-
-    <image src="/assets/images/homework/selection.svg"></image>  
-
-    <view class="hw-info">
-      <text class="title">{{item.paperName}}</text>
-
-      <!-- <view class="class">
-        <image 
-        src="/assets/images/tbar/class.svg">
-        </image>
-        <text>{{item.name}}</text>
-      </view> -->
-
-      <!-- <view class="statistic">
-      
-        <view class="s-item">
-          <text>已提交</text>
-          <view class="bar">
-            <view style="width: {{item.subs / item.total * 100 }}%;"></view>
-          </view>
-          <text>{{item.subs}}/{{item.total}}</text>
+    <view class="ct">
+        <view class="hw-item" wx:for="{{course}}" wx:key="item.courseId"
+              data-courseId= "{{item.courseId}}" bindtap="gotoCourseDetail">
+            <image src = "{{item.coursePicUrl}}"></image>
+            <view class="classTitle">{{item.courseName}}</view>
         </view>
-      
-
-        <view class="s-item">
-          <text>正确率</text>
-          <view class="bar">
-            <view style="width: {{item.rrate * 100}}%;"></view>
-          </view>
-          <text>{{item.rrate * 100}}%</text>
-        </view>
-      
-      </view> -->
-
-    
     </view>
-
-
-
-
-  </view>
-
-
-  <navigator class="release-hw" url="/pages/paper/test/test">
-    <image src="/assets/images/homework/release.svg"></image>
-  </navigator>
-
-
-
-
- 
-
-  </view>
-
-
-
-
-
-
-
-
-
-
-
+    <navigator class="add" url="/pages/homework/add/add">
+      <image src="/assets/images/common/add.png"></image>
+    </navigator>
 </view>
+
 

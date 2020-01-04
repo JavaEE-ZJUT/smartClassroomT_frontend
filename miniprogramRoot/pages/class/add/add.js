@@ -11,62 +11,46 @@ Page({
    */
   data: {
     CustomBar: globalData.CustomBar,
+    problems:[]
   },
 
+  checkboxChange:function(e) {
+    console.log(e.detail.value)
+    wx.setStorageSync("proList", e.detail.value)
+  },
 
   formSubmit(e) {
-
-    let title = '';
-    const value = e.detail.value;
-
-    value.classOpenyear = parseInt(value.classOpenyear);
-
-    title = value.classOpenyear ? title : '开课学年未填写';
-    title = value.classClassroom ? title : '教室未填写';
-    title = value.className ? title : '班级名未填写';
-
-    if (title) {
-      Util.showToast({
-        title
-      });
-      return;
-    }
-
-    console.log(value);
-
-    wx.showLoading({
-      title: '修改中',
-      mask: true
-    });
-
-    value.teacherId = 1;
-
-    rq({
-      path: '/class/addClass',
-      method: 'post',
-      data: value
-    })
-
-      .then(res => {
-        wx.hideLoading();
-        if (res.status == 'success') {
-          this.setData({
-            input: ''
-          });
-          Util.showToast({
-            title: '添加成功',
-            s: 1
-          });
-        } else {
-          console.log(res);
-          Util.showToast({
-            title: '添加失败',
-            s: 0
-          });
+    wx.request({
+      url: 'https://www.xuyuyan.cn/paperProblem/createNewPaper?paperName=' + e.detail.value.paperName + '&problemList=' + wx.getStorageSync("proList"),
+      // data: {
+      //   paperName: e.detail.value.paperName, 
+      //   problemList: wx.getStorageSync("proList")
+      // },
+      header: {
+        'content-encoding': 'gzip',
+        'vary': 'accept-encoding',
+        'content-type': 'application/json',
+        'charset': 'UTF-8'
+      },
+      method: "GET",
+      success: function (res) {
+        var e = this;
+        console.log(res);
+        if (res.data.status == "success") {
+          wx.showToast({
+            title: '创建成功',
+            icon: 'succes',
+            duration: 1000,
+            mask: true
+          })
+          wx.redirectTo({
+            url: '/pages/index/index',
+          })
         }
-      })
-      .catch(Util.requestFail)
-
+      },
+      fail: function (err) { },//请求失败
+      complete: function () { }//请求完成后执行的函数
+    })
   },
 
 
@@ -76,7 +60,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**
@@ -90,7 +73,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    rq({
+      path: '/problem/getAllProblems',
+    })
+    .then(res => {
+      if (res.status == 'success') {
 
+        this.setData({
+          problems: res.data
+        })
+      }
+      console.log(res);
+    })
+    .catch(Util.requestFail);
   },
 
   /**

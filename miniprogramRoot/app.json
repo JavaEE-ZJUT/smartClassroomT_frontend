@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/homework/detail/detail",
     "pages/class/info/info",
     "pages/login/login",
     "pages/problem/select/select",
@@ -17,7 +18,12 @@
     "pages/class/ppt/ppt",
     "pages/class/add/add",
     "pages/problem/home/home",
-    "pages/problem/add/add"
+    "pages/problem/add/add",
+    "pages/user/binding/binding",
+    "pages/homework/add/add",
+    "pages/homework/paper_problem_detail/paper_problem_detail",
+    "pages/problem/update/update",
+    "pages/homework/addPaper/addPaper"
   ],
   "window": {
     "navigationStyle": "custom",

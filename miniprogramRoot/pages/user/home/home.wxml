@@ -1,3 +1,4 @@
+<view class="wbar" style="height: {{CustomBar}}px;"></view>
 <view class="user">
 
   <view class="user-info">
@@ -12,15 +13,7 @@
       <image src="/assets/images/user/mine.svg"></image>
       <view>
         <text class="label">姓名</text>
-        <text class="content">暮雨</text>
-      </view>
-    </view>
-
-    <view class="list-item">
-      <image src="/assets/images/user/subject.svg"></image>
-      <view>
-        <text class="label">科目</text>
-        <text class="content">英语</text>
+        <text class="content">xyy</text>
       </view>
     </view>
 
@@ -32,10 +25,10 @@
     </navigator>
 
 
-    <navigator class="list-item" url="/pages/user/developer/developer" hover-class="none">
+    <navigator class="list-item" url="/pages/user/binding/binding" hover-class="none">
       <image src="/assets/images/user/developer.svg"></image>
       <view>
-        <text class="label">开发人员</text>
+        <text class="label">绑定工号</text>
       </view>
     </navigator>
 

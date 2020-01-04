@@ -6,8 +6,8 @@
 
 <view class="release" style="padding-top:{{CustomBar}}px;">
 
-  <form 
-     class="form" 
+  <form
+     class="form"
      bindsubmit="formSubmit"
      report-submit="true"
      report-submit-timout="5">
@@ -15,37 +15,37 @@
 
     <view class="cu-form-group">
         <view class="title">题目</view>
-        <input name="place" type="text" maxlength="50" 
-        style="padding-left: 0.7em;" 
+        <input name="Info" type="text" maxlength="50"
+        style="padding-left: 0.7em;"
         value="{{input}}"></input>
     </view>
 
     <view class="cu-form-group">
         <view class="title">A</view>
-        <input name="place" type="text" maxlength="30" 
-        style="padding-left: 2em;" 
+        <input name="a" type="text" maxlength="30"
+        style="padding-left: 2em;"
         value="{{input}}"></input>
     </view>
 
     <view class="cu-form-group">
         <view class="title">B</view>
-        <input name="place" type="text" maxlength="30" 
-        style="padding-left: 2em;" 
+        <input name="b" type="text" maxlength="30"
+        style="padding-left: 2em;"
         value="{{input}}"></input>
     </view>
 
     <view class="cu-form-group">
         <view class="title">C</view>
-        <input name="place" type="text" maxlength="30" 
-        style="padding-left: 2em;" 
+        <input name="c" type="text" maxlength="30"
+        style="padding-left: 2em;"
         value="{{input}}"></input>
     </view>
 
 
     <view class="cu-form-group">
         <view class="title">D</view>
-        <input name="place" type="text" maxlength="30" 
-        style="padding-left: 2em;" 
+        <input name="d" type="text" maxlength="30"
+        style="padding-left: 2em;"
         value="{{input}}"></input>
     </view>
 
@@ -62,10 +62,10 @@
 
     <view class="cu-form-group top">
         <view class="title">题解</view>
-        <textarea name="content" type="text" 
-        show-confirm-bar="{{false}}" 
+        <textarea name="content" type="text"
+        show-confirm-bar="{{false}}"
         style="padding-left: 0.7em;"
-        maxlength="50" 
+        maxlength="50"
         value="{{input}}"></textarea>
     </view>
 
@@ -73,7 +73,7 @@
     <view class="cu-form-group top">
       <button form-type="submit" hover-class="none">发布</button>
     </view>
-    
+
   </form>
 
 

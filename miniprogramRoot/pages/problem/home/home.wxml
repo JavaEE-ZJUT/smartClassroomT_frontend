@@ -2,7 +2,7 @@
 
   <view class="body">
 
-    <view class="choice-qs {{fold!=item.problemId ? 'fold' : ''}}" wx:for="{{paper}}" wx:key="unique" data-id="{{item.problemId}}" bindtap="fold">
+    <view class="choice-qs {{fold!=item.problemId ? 'fold' : ''}}" wx:for="{{paper}}" wx:key="unique" data-id="{{item.problemId}}" bindtap="fold" bindlongpress="handleLongPress">
 
       <view class="title">
         <text>{{index+1}}.</text>
@@ -12,22 +12,22 @@
 
       <view class="option">
 
-        <view class="item {{item.problemAns == 1 ? 'active' : ''}}">
+        <view class="item {{item.problemAns == 0 ? 'active' : ''}}">
           <text>A. </text>
           <text>{{item.problemChoose1}}</text>
         </view>
 
-        <view class="item {{item.problemAns == 2 ? 'active' : ''}}">
+        <view class="item {{item.problemAns == 1 ? 'active' : ''}}">
           <text>B. </text>
           <text>{{item.problemChoose2}}</text>
         </view>
 
-        <view class="item {{item.problemAns == 3 ? 'active' : ''}}">
+        <view class="item {{item.problemAns == 2 ? 'active' : ''}}">
           <text>C. </text>
           <text>{{item.problemChoose3}}</text>
         </view>
 
-        <view class="item {{item.problemAns == 4 ? 'active' : ''}}">
+        <view class="item {{item.problemAns == 3 ? 'active' : ''}}">
           <text>D. </text>
           <text>{{item.problemChoose4}}</text>
         </view>

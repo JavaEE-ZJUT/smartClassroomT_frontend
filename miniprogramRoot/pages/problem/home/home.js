@@ -18,9 +18,9 @@ Component({
     ts: []
   },
 
-  methods: {
+  
 
-  },
+
 
 
   lifetimes: {
@@ -35,6 +35,7 @@ Component({
             this.setData({
               paper: res.data
             })
+            wx.setStorageSync("problems", res.data)
           }
           console.log(res);
         })
@@ -56,6 +57,16 @@ Component({
         fold: id
       });
     },
+
+    handleLongPress: function (e) {
+      console.log("触发了长按事件")
+      console.log(e);
+      var id = e.currentTarget.dataset.id;
+      console.log()
+      wx.redirectTo({
+        url: '/pages/problem/update/update?id=' + id,
+      })
+    }
 
   }
 })

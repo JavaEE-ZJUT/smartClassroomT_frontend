@@ -1,41 +1,52 @@
 <window-bar isBack="{{true}}">
   <view slot="backText">返回</view>
-  <view slot="content">添加班级</view>
+  <view slot="content">添加练习</view>
 </window-bar>
 
 
 <view class="release" style="padding-top:{{CustomBar}}px;">
-
   <form class="form" bindsubmit="formSubmit">
 
     <view class="cu-form-group">
-      <view class="title">班级名</view>
-      <input name="className" type="text" maxlength="15" 
-      style="padding-left: 3em;" value="{{input}}"></input>
+      <view class="title">练习名</view>
+      <input name="paperName" type="text" maxlength="15" 
+      style="padding-left: 3em;" value="请输入要创建的练习名"></input>
     </view>
 
-
-
-    <view class="cu-form-group">
-      <view class="title">教室</view>
-      <input name="classClassroom" type="text" maxlength="15" 
-      style="padding-left: 4em;" value="{{input}}"></input>
-    </view>
-
-    <view class="cu-form-group">
-      <view class="title">开课学年</view>
-      <input name="classOpenyear" type="number" maxlength="15" 
-      style="padding-left: 2em;" value="{{input}}"></input>
-    </view>
-
-
+  <view style="margin-top: 15px;margin-left: 15px;">请在以下选择要加入练习的问题：</view>
+  <checkbox-group class="body" bindchange="checkboxChange">
+      <checkbox class="choice-qs {{fold!=item.problemId ? 'fold' : ''}}" wx:for="{{problems}}" wx:key="unique" data-id="{{item.problemId}}" bindtap="fold" value="{{item.problemId}}">
+        <view class="title" style="margin-left: 25px;width: 290px;">
+          <text>{{index+1}}.</text>
+          <text>{{item.problemInfo}}</text>
+          <text class="icon-right"></text>
+        </view>
+        <view class="option">
+          <view class="item {{item.problemAns == 1 ? 'active' : ''}}">
+            <text>A. </text>
+            <text>{{item.problemChoose1}}</text>
+          </view>
+          <view class="item {{item.problemAns == 2 ? 'active' : ''}}">
+            <text>B. </text>
+            <text>{{item.problemChoose2}}</text>
+          </view>
+          <view class="item {{item.problemAns == 3 ? 'active' : ''}}">
+            <text>C. </text>
+            <text>{{item.problemChoose3}}</text>
+          </view>
+          <view class="item {{item.problemAns == 4 ? 'active' : ''}}">
+            <text>D. </text>
+            <text>{{item.problemChoose4}}</text>
+          </view>
+        </view>
+        <view class="explain">
+          {{item.problemExplain}}
+        </view>
+      </checkbox>
+    </checkbox-group>
 
     <view class="cu-form-group top">
       <button form-type="submit" hover-class="none">添加</button>
     </view>
-
   </form>
-
-
-
 </view>

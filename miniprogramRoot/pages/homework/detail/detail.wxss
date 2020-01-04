@@ -1,0 +1,184 @@
+/* pages/homework/detail/detail.wxss */
+@import'../../../font/font.wxss';
+.hw {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    overflow-y: hidden;
+    background-color: var(--bg);
+}
+
+.hw .ct {
+    width: 100%;
+    height: 100%;
+    padding: 25rpx 15rpx;
+    overflow-y: auto;
+}
+
+.release-hw {
+    position: absolute;
+    bottom: 50rpx;
+    right: 90rpx;
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 100%;
+    padding: 25rpx;
+    box-sizing: border-box;
+    background-color: var(--main);
+}
+
+.release-hw image {
+    width: 100%;
+    height: 100%;
+}
+
+.hw-item {
+    width: 90%;
+    padding: 10rpx 10rpx;
+    border-radius: 12rpx;
+    background-color: #fff;
+    display: inline-block;
+    margin-left: 5%;
+}
+
+.hw-item + .hw-item {
+    margin-top: 35rpx;
+}
+
+.hw-item > image {
+    flex: 0 0 auto;
+    width: 150rpx;
+    height: 150rpx;
+    margin: 0 20rpx;
+    box-sizing: border-box;
+}
+
+.hw-info {
+    height: 100%;
+    flex: 1 1 auto;
+    color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hw-info .class image {
+    width: 80rpx;
+    height: 80rpx;
+    margin-right: 15rpx;
+}
+
+.hw-info .title {
+    font-size: 1.1rem;
+    line-height: 45rpx;
+}
+
+.hw-item .class {
+    display: flex;
+    align-items: center;
+    padding: 5rpx 10rpx;
+    font-size: 0.8rem;
+}
+
+.hw-info .statistic {
+    width: 100%;
+    display: flex;
+    padding: 15rpx 5rpx;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.statistic .s-item {
+    width: 49%;
+    height: 100%;
+    padding: 10rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: antiquewhite; */
+}
+
+.s-item text {
+    font-size: 0.7rem;
+}
+
+.s-item .bar {
+    flex: 1 1 auto;
+    height: 12rpx;
+    border-radius: 10rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    background-color: #eee;
+}
+
+.s-item .bar view {
+    height: 100%;
+    border-radius: 100rpx;
+    background-color: var(--main);
+}
+
+.classTitle {
+    font-size: 20px;
+    margin-left: 10px;
+    
+}
+
+
+.mytitle {
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.arrow{
+    position: absolute;
+    top:38px;
+    left: 20px;
+    width: 14px;
+    height: 14px;
+    border-bottom: 2px solid var(--main);
+    border-left: 2px solid var(--main);
+    transform: rotate(45deg);
+    z-index: 99;
+}
+.content {
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    border: 1px solid var(--main);
+    padding: 2px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.box {  
+  margin: 20rpx 0; 
+}
+
+.box view.cu-bar {
+  margin-top: 20rpx; 
+}
+
+.button {
+  height: 50px;
+  width: 150px;
+  background-color: var(--main);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.btn_content {
+  line-height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.underline {
+  border-bottom: 3px solid;
+}

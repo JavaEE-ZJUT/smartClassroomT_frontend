@@ -17,22 +17,30 @@ Component({
   },
 
   methods: {
-
+    gotoCourseDetail: function(key) {
+      console.log(key.currentTarget.dataset.courseid);
+      // wx.setStorageSync("courseId", key.currentTarget.dataset.courseid);
+      wx.redirectTo({
+        url: "/pages/homework/detail/detail?courseId=" +  key.currentTarget.dataset.courseid
+      })
+    },
   },
 
 
-  lifetimes: {
 
+  lifetimes: {
     attached() {
       rq({
-        path: '/paper/getAllPaperInfo'
+        path: '/course/returnCourseDetailByTeacherId?teacherId=' + wx.getStorageSync("teacherId")
+        // path: '/course/returnCourseDetailByStudentId?studentId=1'
       })
       .then(res => {
         if (res.status == 'success') {
-          
+          console.log(res.data)
           this.setData({
-            paper: res.data
+            course: res.data
           })
+          wx.setStorageSync("courseList", res.data);
         }
       })
         .catch(Util.requestFail);

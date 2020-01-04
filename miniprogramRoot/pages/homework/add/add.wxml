@@ -1,0 +1,51 @@
+<!--pages/homework/add/add.wxml-->
+<window-bar isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">添加班级</view>
+</window-bar>
+
+
+<view class="release" style="padding-top:{{CustomBar}}px;">
+
+    <form class="form" bindsubmit="formSubmitForCourse">
+
+        <view class="cu-form-group">
+            <view class="title">课程名称</view>
+            <input name="courseName" type="text" maxlength="15"
+                   style="padding-left: 3em;" value="{{input}}"></input>
+        </view>
+
+        <view class="cu-form-group">
+            <view class="title">课程详情</view>
+            <input name="courceDetail" type="text" maxlength="15"
+                   style="padding-left: 4em;" value="{{input}}"></input>
+        </view>
+
+        <view class="cu-form-group">
+            <view class="title">考察方式（输入考试课/考察课）</view>
+            <input name="courseMethod" type="text" maxlength="15"
+                   style="padding-left: 4em;" value="{{input}}"></input>
+        </view>
+
+        <view class="cu-form-group">
+            <view class="title">学分</view>
+            <input name="credit" type="number" maxlength="15"
+                   style="padding-left: 2em;" value="{{input}}"></input>
+        </view>
+
+
+        <view class="cu-form-group">
+            <view class="title">上传课程图片</view>
+            <text class="iconfont icon-shangchuan" style='width:20px;height:20px;'
+                  bindtap='uploadPic'></text>
+        </view>
+
+        <view class="cu-form-group top">
+            <button form-type="submit" hover-class="none">添加</button>
+        </view>
+
+    </form>
+
+
+
+</view>

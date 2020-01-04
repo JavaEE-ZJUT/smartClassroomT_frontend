@@ -1,0 +1,74 @@
+/* pages/homework/add/add.wxss */
+
+@import'../../../font/font.wxss';
+
+page {
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+
+}
+
+
+.release {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.form {
+    display: block;
+    margin-top: 45rpx;
+}
+
+.cu-form-group > .title {
+    flex: 0 0 auto;
+}
+
+.cu-form-group > .picker {
+    text-align: center;
+    padding-left: 2em;
+    word-break: break-all;
+}
+
+.cu-form-group:last-child {
+    padding: 70rpx 0;
+}
+
+
+.form button {
+    width: 50%;
+    padding: 40rpx 0;
+    margin: auto;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 28rpx;
+    height: 64rpx;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    overflow: visible;
+    color: var(--white);
+
+    background-color: var(--main);
+}
+
+.form button::after {
+    content: "";
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1rpx solid currentColor;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: 12rpx;
+    z-index: 1;
+    pointer-events: none;
+}

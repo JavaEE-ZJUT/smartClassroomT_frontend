@@ -1,35 +1,22 @@
 <import src="/template/loading/loading.wxml"></import>
 
 <template is="loading" wx:if="{{loading}}"></template>
-
-
-
-
-
 <view class="class">
-
-
-<view class="ct">
-
-  <view class="class-item" data-url="/pages/class/info/info" data-info="{{item}}" wx:for="{{classes}}" wx:key="unique" bindtap="tapClass">
-    <text class="name">{{item.className}}</text>
-    <view class="number">
-      <image src="/assets/images/tbar/class.png"></image>
-      <text>班级号：{{item.classId}}</text>
+  <view class="ct">
+    <view class="class-item" data-url="/pages/class/info/info" data-info="{{item}}" wx:for="{{papers}}" wx:key="unique" bindtap="tapClass" style="height: 95px;">
+      <text class="name">{{item.paperName}}</text>
+      <view class="number">
+        <image src="/assets/images/tbar/class.png"></image>
+        <text>练习号：{{item.paperId}}</text>
+      </view>
+      <view class="btn" bindtap="delete" data-id="{{item.paperId}}">
+        <view class="btn_content">删除</view>
+      </view>
     </view>
   </view>
-
-
-
-
-  </view>
-
-
-
   <navigator class="add" url="/pages/class/add/add">
     <image src="/assets/images/common/add.png"></image>
   </navigator>
-
 </view>
 
 

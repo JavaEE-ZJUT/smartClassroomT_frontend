@@ -1,0 +1,39 @@
+<!--pages/binding/binding.wxml-->
+<view class='arrow' bindtap='back'></view>
+<view class="wbar" style="height: {{CustomBar}}px;"></view>
+<view class="login">
+
+
+    <form class="form" bindsubmit="formSubmit">
+
+        <view class="title">工号绑定</view>
+
+        <radio-group>
+
+            <label class="form-item">
+                <radio checked></radio>
+                <input placeholder="工号"
+                       type="text"
+                       auto-focus="true"
+                       name="account"></input>
+            </label>
+
+            <label class="form-item">
+                <radio></radio>
+                <input placeholder="密码" type="password" name="password"></input>
+            </label>
+
+            <label class="form-item">
+                <radio></radio>
+                <input placeholder="姓名" type="text" name="name"></input>
+            </label>
+
+
+        </radio-group>
+
+        <button formType="submit">登录</button>
+
+    </form>
+
+</view>
+

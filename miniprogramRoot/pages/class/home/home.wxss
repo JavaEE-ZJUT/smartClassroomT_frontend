@@ -80,7 +80,28 @@
 }
 
 
+.btn {
+  display: inline-block;
+  border: 1px solid red;
+  background-color: red;
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
 
+  margin-left: auto;
+  position: relative;
+  top: -56px;
+}
+
+.btn_content {
+  line-height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
 
 
 
